@@ -80,6 +80,13 @@ def clear_result_frame():
         widget.destroy()
     result_widgets.clear()
 
+def clear_input_fields():
+    master_carton_entry.delete(0, tk.END)  # Clear master carton entry
+    unit_labels_entry.delete("1.0", tk.END)  # Clear unit labels entry
+
+def clear_input_fields_and_result_frame():
+    clear_input_fields()
+    clear_result_frame()
 
 root = tk.Tk()
 root.title("Master Carton Comparison")
@@ -102,7 +109,7 @@ button_frame.pack()
 submit_button = tk.Button(button_frame, text="Submit", command=submit)
 submit_button.pack(side=tk.LEFT)
 
-clear_button = tk.Button(button_frame, text="Clear", command=clear_result_frame)
+clear_button = tk.Button(button_frame, text="Clear", command=clear_input_fields_and_result_frame)
 clear_button.pack(side=tk.LEFT)
 
 result_frame = tk.Frame(root)  # Create result frame
