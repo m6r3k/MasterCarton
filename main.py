@@ -91,6 +91,7 @@ def clear_input_fields_and_result_frame():
 root = tk.Tk()
 root.title("Master Carton Comparison")
 
+
 master_carton_label = tk.Label(root, text="Enter 2D code from Master carton:")
 master_carton_label.pack()
 
@@ -106,10 +107,10 @@ unit_labels_entry.pack()
 button_frame = tk.Frame(root)
 button_frame.pack()
 
-submit_button = tk.Button(button_frame, text="Submit", command=submit)
+submit_button = tk.Button(button_frame, text="Compare", command=submit)
 submit_button.pack(side=tk.LEFT)
 
-clear_button = tk.Button(button_frame, text="Clear", command=clear_input_fields_and_result_frame)
+clear_button = tk.Button(button_frame, text="Clear All", command=clear_input_fields_and_result_frame)
 clear_button.pack(side=tk.LEFT)
 
 result_frame = tk.Frame(root)  # Create result frame
